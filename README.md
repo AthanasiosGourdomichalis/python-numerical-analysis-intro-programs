@@ -50,6 +50,8 @@
   <img src="./2. Monte Carlo integration method 2.0 (mygraph)/graph_3.png" width="450" alt="Monte Carlo n=16000">
 </p>
 
+---
+
 ### 📌 03 & 04: Fixed-Point Iteration (General Iterative Method)
 * **Description:** Numerical solution of non-linear equations by rearranging $f(x) = 0$ into the equivalent fixed-point form $x = g(x)$ and generating the iterative sequence $x_{k+1} = g(x_k)$. Both implementations verify convergence conditions under the Fixed-Point Theorem and numerically estimate the asymptotic convergence rate ($p \approx 1.0$) and error constant ($C$).
   * **Exercise 3 (Errors Plot):** Solves the cubic equation $f(x) = x^3 + x - 1 = 0$ using the rearrangement $g(x) = \sqrt[3]{1 - x}$ with $x_0 = 0$, tolerance $\text{tol} = 10^{-6}$, and max iterations $= 100$. Tracks and plots consecutive errors $e_k = \vert{}x_{k+1} - x_k\vert{}$ across iterations, verifying an asymptotic error constant $C \approx 0.7160$.
@@ -70,6 +72,25 @@
 <p align="left">
   <img src="./4. fixed point iteration method 2.0 (functions graph plotting)/graph.png" width="450" alt="Fixed-Point Iteration Curves Intersection">
 </p>
+
+---
+
+### 📌 05: Newton-Raphson (N-R) Method
+* **Description:** Iterative root-finding algorithm using tangent line linearization to compute real roots of the non-linear polynomial $f(x) = x^4 + 2x^3 - 7x^2 + 3 = 0$ with derivative $f'(x) = 4x^3 + 6x^2 - 14x$.
+  * **Automated Root Search:** Iterates through starting points $x_0 = i \cdot 0.1$ (avoiding division-by-zero when $f'(x_0) = 0$) with tolerance $\text{tol} = 10^{-4}$ and $\text{maxit} = 15$ to isolate both distinct positive real roots: $x_1^* \approx 1.6180$ and $x_2^* \approx 0.7913$.
+  * **Convergence Analysis ($x_0 = 1.4$):** Evaluates error progression towards $x^* \approx 1.6180$ in 5 iterations. The asymptotic error ratio $e_5 / e_4^2 \approx 1.8504$ closely matches the theoretical constant C = |f''(x*)| / (2|f'(x*)|) ≈ 1.8416, verifying quadratic convergence ($p = 2$).
+* **Tools & Libraries:** `numpy`, `matplotlib.pyplot`
+* **Files & Documentation:** [`Notebook`](<./5. Newton-Raphson (N-R) method/newton-raphson-method.ipynb>), [`Script (.py)`](<./5. Newton-Raphson (N-R) method/newton-raphson-method.py>), [Documentation (PDF)](<./5. Newton-Raphson (N-R) method/assignment.pdf>)
+
+#### 📊 Output Visualizations (Error Convergence for $x_0 = 1.4$)
+<p align="left">
+  <img src="./5. Newton-Raphson (N-R) method/graph_1.png" width="450" alt="Newton-Raphson Error - Linear Scale">
+</p>
+<p align="left">
+  <img src="./5. Newton-Raphson (N-R) method/graph_2.png" width="450" alt="Newton-Raphson Error - Log Scale">
+</p>
+
+---
 
 
 
