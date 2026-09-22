@@ -192,7 +192,7 @@ Verification Check: L * L^T (Matches S):
 ```
 ---
 
-## Repo Structure
+## Repository Structure
 
 ```text
 .
