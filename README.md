@@ -192,6 +192,66 @@ Verification Check: L * L^T (Matches S):
 ```
 ---
 
+## Repo Structure
+
+```text
+.
+├── 1. Monte Carlo integration method 1.0 (parabolas)/
+│   ├── assignment.pdf
+│   ├── graph.png
+│   ├── monte-carlo-integration-method.ipynb
+│   └── monte-carlo-integration-method.py
+│
+├── 2. Monte Carlo integration method 2.0 (mygraph)/
+│   ├── assignment.pdf
+│   ├── graph_1.png
+│   ├── graph_2.png
+│   ├── graph_3.png
+│   ├── monte-carlo-integration-2.0-mygraph.ipynb
+│   └── monte-carlo-integration-2.0-mygraph.py
+│
+├── 3. fixed point iteration method 1.0 (errors plot)/
+│   ├── assignment.pdf
+│   ├── graph.png
+│   ├── fixed-point-iteration-method.ipynb
+│   └── fixed-point-iteration-method.py
+│
+├── 4. fixed point iteration method 2.0 (functions plot)/
+│   ├── assignment.pdf
+│   ├── graph.png
+│   ├── fixed-point-iteration-method-2.0.ipynb
+│   └── fixed-point-iteration-method-2.0.py
+│
+├── 5. Newton-Raphson (N-R) method/
+│   ├── assignment.pdf
+│   ├── graph_1.png
+│   ├── graph_2.png
+│   ├── newton-raphson-method.ipynb
+│   └── newton-raphson-method.py
+│
+├── 6. Secant method/
+│   ├── assignment.pdf
+│   ├── graph_1.png
+│   ├── graph_2.png
+│   ├── secant-method.ipynb
+│   └── secant-method.py
+│
+├── 7. BONUS computational cost comparison (N-R vs secant)/
+│   ├── assignment.pdf
+│   ├── graph_1.png
+│   ├── graph_2.png
+│   ├── graph_3.png
+│   ├── graph_4.png
+│   └── computational-cost-comparison-NR-secant.ipynb
+│
+├── 8. Cholesky decomposition/
+│   ├── assignment.pdf
+│   ├── cholesky-decomp.ipynb
+│   └── cholesky-decomp.py
+│
+└── README.md
+```
+
 ---
 
 # 👤 Author
