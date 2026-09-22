@@ -150,6 +150,50 @@
 
 ---
 
+### 📌 08: Cholesky Matrix Decomposition Example
+* **Description:** Implementation of the direct, column-oriented Cholesky factorization method in numerical linear algebra. Any real, symmetric, and positive-definite (SPD) matrix $S$ is uniquely decomposed into the product of a lower triangular matrix $L$ (with strictly positive diagonal elements) and its transpose:
+  $$S = L \cdot L^T$$
+  * **Computational Advantages:** Highly stable numerically for SPD matrices without requiring row or column pivoting (unlike Gaussian elimination or general LU decomposition). It requires approximately half the arithmetic operations ($\approx n^3/3\text{ FLOPs}$) of LU factorization ($2n^3/3\text{ FLOPs}$), running more than twice as fast in practice.
+  * **Algorithm Implementation:** Implemented from scratch via a custom `cholesky(a)` function using NumPy arrays and native math functions (`math.sqrt`) without relying on black-box solvers like `scipy.linalg.cholesky` or `np.linalg.cholesky`. It updates column by column, eliminates previous column contributions, computes square-root pivots on the diagonal, scales subdiagonal elements, and isolates $L$ using `np.tril()`.
+  * **Test Matrix Construction & Verification:** Built an auxiliary $5 \times 5$ lower triangular matrix $A$ with full column rank to construct the guaranteed symmetric positive-definite matrix $S = A^T \cdot A$. The decomposition is verified by computing $L \cdot L^T$ (`np.dot(L, L.T)`), exactly reconstructing the original matrix $S$ within numerical precision.
+* **Tools & Libraries:** `numpy`, `math.sqrt`
+* **Files & Documentation:** [`Notebook`](<./8. Cholesky decomposition/cholesky-decomp.ipynb>), [`Script (.py)`](<./8. Cholesky decomposition/cholesky-decomp.py>), [Documentation (PDF)](<./8. Cholesky decomposition/assignment.pdf>)
+
+#### Numerical Results & Matrix Reconstruction
+
+```text
+Matrix A (5x5 Lower Triangular, Full Rank):
+[[1. 0. 0. 0. 0.]
+ [1. 2. 0. 0. 0.]
+ [1. 2. 3. 0. 0.]
+ [1. 2. 3. 4. 0.]
+ [1. 2. 3. 4. 5.]]
+
+Symmetric Positive-Definite Matrix S = A^T * A:
+[[ 5.  8.  9.  8.  5.]
+ [ 8. 16. 18. 16. 10.]
+ [ 9. 18. 27. 24. 15.]
+ [ 8. 16. 24. 32. 20.]
+ [ 5. 10. 15. 20. 25.]]
+
+Computed Lower Triangular Factor L:
+[[2.23606798 0.         0.         0.         0.        ]
+ [3.57770876 1.78885438 0.         0.         0.        ]
+ [4.02492236 2.01246118 2.59807621 0.         0.        ]
+ [3.57770876 1.78885438 2.30940108 3.26598632 0.        ]
+ [2.23606798 1.11803399 1.44337567 2.04124145 3.53553391]]
+
+Verification Check: L * L^T (Matches S):
+[[ 5.  8.  9.  8.  5.]
+ [ 8. 16. 18. 16. 10.]
+ [ 9. 18. 27. 24. 15.]
+ [ 8. 16. 24. 32. 20.]
+ [ 5. 10. 15. 20. 25.]]
+```
+---
+
+---
+
 # 👤 Author
 ## Athanasios Gourdomichalis - https://github.com/AthanasiosGourdomichalis
 
