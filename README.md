@@ -20,3 +20,21 @@
 | **06** | **Secant Method implementation for Solving Non-Linear Equations, with Consecutive Errors Plotting (both Linear and Logarithmic scale)** | <a href="./6. Secant method/"><img src="./6. Secant method/graph_2.png" height =auto width="520" alt="Secant Method"></a> | [`📄assignment.pdf`](<./6. Secant method/assignment.pdf>) | [`Jupyter Notebook`](<./6. Secant method/secant-method.ipynb>) | [`Python Code`](<./6. Secant method/secant-method.py>) |
 | **07** | ***`Bonus`*: Computational Cost Comparison experiment: Newton-Raphson Method vs. Secant Method for Solving Non-Linear Equations** | <a href="./7. BONUS computational cost comparison between N-R and Secant/"><img src="./7. BONUS computational cost comparison between N-R and Secant/graph_1.png" height=auto width="520" alt="Cost Comparison"></a> | [`📄assignment.pdf`](<./7. BONUS computational cost comparison between N-R and Secant/assignment.pdf>) | [`Jupyter Notebook`](<./7. BONUS computational cost comparison between N-R and Secant/computational-cost-comparison-NR-secant.ipynb>) | [`Python Code`](<./7. BONUS computational cost comparison between N-R and Secant/computational-cost-comparison-NR-secant.ipynb>) |
 | **08** | **Cholesky Decomposition Example** | <a href="./8. Cholesky decomposition/"><img src="./8. Cholesky decomposition/graph.png" height="520" width="520" alt="Cholesky"></a> | [`📄assignment.pdf`](<./8. Cholesky decomposition/assignment.pdf>) | [`Jupyter Notebook`](<./8. Cholesky decomposition/cholesky-decomp.ipynb/>) | [`Python Code`](<./8. Cholesky decomposition/cholesky-decomp.py/>) |
+
+---
+
+
+
+
+
+
+
+
+
+
+
+---
+# 👤 Author
+## Athanasios Gourdomichalis - https://github.com/AthanasiosGourdomichalis
+
+---
