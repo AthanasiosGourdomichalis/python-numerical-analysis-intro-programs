@@ -25,8 +25,8 @@
 ## In-Depth Section Breakdown
 ### 📌 01 & 02: Monte Carlo Numerical Integration
 * **Description:** Stochastic approximation of definite integrals and geometric areas using uniform random sampling within a defined bounding domain $[0, 1] \times [0, 1]$.
-  * **Project 1.0 (Parabolas):** Evaluates the area between two intersecting parabolic curves, $P_1(x) = x^2 - x + 1/2$ and $P_2(x) = -x^2 + x + 1/2$, averaged across 10 independent trials of $n = 1000$ points each (Estimate $\approx 0.3266$, Exact $= 1/3$).
-  * **Project 2.0 (function `mygraph()`):** Integrates $f(x) = \sqrt{x}$ over $[0, 1]$ across multiple sample sizes ($n = 1000, 4000, 16000$) using a modular plotting function `mygraph()` to demonstrate convergence and error behavior (Exact $= 2/3 \approx 0.6667$).
+  * **Exercise 1 (Parabolas):** Evaluates the area between two intersecting parabolic curves, $P_1(x) = x^2 - x + 1/2$ and $P_2(x) = -x^2 + x + 1/2$, averaged across 10 independent trials of $n = 1000$ points each (Estimate $\approx 0.3266$, Exact $= 1/3$).
+  * **Exercise 2 (function `mygraph()`):** Integrates $f(x) = \sqrt{x}$ over $[0, 1]$ across multiple sample sizes ($n = 1000, 4000, 16000$) using a modular plotting function `mygraph()` to demonstrate convergence and error behavior (Exact $= 2/3 \approx 0.6667$).
 * **Tools & Libraries:** `numpy`, `matplotlib.pyplot`, `sympy`
 * **Files & Documentation:**
   * **Exercise 1:** [`Notebook`](<./1. Monte Carlo integration method 1.0 (parabolas)/monte-carlo-integration-method.ipynb>), [`Script (.py)`](<./1. Monte Carlo integration method 1.0 (parabolas)/monte-carlo-integration-method.py>), [Documentation (PDF)](<./1. Monte Carlo integration method 1.0 (parabolas)/assignment.pdf>)
@@ -50,8 +50,26 @@
   <img src="./2. Monte Carlo integration method 2.0 (mygraph)/graph_3.png" width="450" alt="Monte Carlo n=16000">
 </p>
 
+### 📌 03 & 04: Fixed-Point Iteration (General Iterative Method)
+* **Description:** Numerical solution of non-linear equations by rearranging $f(x) = 0$ into the equivalent fixed-point form $x = g(x)$ and generating the iterative sequence $x_{k+1} = g(x_k)$. Both implementations verify convergence conditions under the Fixed-Point Theorem and numerically estimate the asymptotic convergence rate ($p \approx 1.0$) and error constant ($C$).
+  * **Exercise 3 (Errors Plot):** Solves the cubic equation $f(x) = x^3 + x - 1 = 0$ using the rearrangement $g(x) = \sqrt[3]{1 - x}$ with $x_0 = 0$, tolerance $\text{tol} = 10^{-6}$, and max iterations $= 100$. Tracks and plots consecutive errors $e_k = \vert{}x_{k+1} - x_k\vert{}$ across iterations, verifying an asymptotic error constant $C \approx 0.7160$.
+  * **Exercise 4 (Functions Plot):** Solves $f(x) = \cos(x) - x = 0$ via the rearrangement $g(x) = \cos(x)$ starting from $x_0 = 0$. Provides a comparative geometric visualization of $y = \cos(x)$ against the identity line $y = x$ on $[-5, 5]$ highlighting the unique real root $x^* \approx 0.739085$ ($C \approx 0.6736$).
+* **Tools & Libraries:** `numpy`, `matplotlib.pyplot`
+* **Files & Documentation:**
+  * **Exercise 3:** [`Notebook`](<./3. fixed point iteration method 1.0 (errors plotting)/fixed-point-iteration-method.ipynb>), [`Script (.py)`](<./3. fixed point iteration method 1.0 (errors plotting)/fixed-point-iteration-method.py>), [Documentation (PDF)](<./3. fixed point iteration method 1.0 (errors plotting)/assignment.pdf>)
+  * **Exercise 4:** [`Notebook`](<./4. fixed point iteration method 2.0 (functions graph plotting)/fixed-point-iteration-method-2.0.ipynb>), [`Script (.py)`](<./4. fixed point iteration method 2.0 (functions graph plotting)/fixed-point-iteration-method-2.0.py>), [Documentation (PDF)](<./4. fixed point iteration method 2.0 (functions graph plotting)/assignment.pdf>)
 
+#### 📊 Output Visualizations
 
+##### Exercise 3: Error Convergence vs. Iterations
+<p align="left">
+  <img src="./3. fixed point iteration method 1.0 (errors plotting)/graph.png" width="450" alt="Fixed-Point Iteration Error Convergence">
+</p>
+
+##### Exercise 4: Geometric Intersection $y = \cos(x)$ & $y = x$
+<p align="left">
+  <img src="./4. fixed point iteration method 2.0 (functions graph plotting)/graph.png" width="450" alt="Fixed-Point Iteration Curves Intersection">
+</p>
 
 
 
