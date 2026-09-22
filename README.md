@@ -22,11 +22,33 @@
 | **08** | **Cholesky Decomposition Example** | <a href="./8. Cholesky decomposition/"><img src="./8. Cholesky decomposition/graph.png" height="520" width="520" alt="Cholesky"></a> | [`📄assignment.pdf`](<./8. Cholesky decomposition/assignment.pdf>) | [`Jupyter Notebook`](<./8. Cholesky decomposition/cholesky-decomp.ipynb/>) | [`Python Code`](<./8. Cholesky decomposition/cholesky-decomp.py/>) |
 
 ---
+## In-Depth Section Breakdown
+### 📌 01 & 02: Monte Carlo Numerical Integration
+* **Description:** Stochastic approximation of definite integrals and geometric areas using uniform random sampling within a defined bounding domain $[0, 1] \times [0, 1]$.
+  * **Project 1.0 (Parabolas):** Evaluates the area between two intersecting parabolic curves, $P_1(x) = x^2 - x + 1/2$ and $P_2(x) = -x^2 + x + 1/2$, averaged across 10 independent trials of $n = 1000$ points each (Estimate $\approx 0.3266$, Exact $= 1/3$).
+  * **Project 2.0 (function `mygraph()`):** Integrates $f(x) = \sqrt{x}$ over $[0, 1]$ across multiple sample sizes ($n = 1000, 4000, 16000$) using a modular plotting function `mygraph()` to demonstrate convergence and error behavior (Exact $= 2/3 \approx 0.6667$).
+* **Tools & Libraries:** `numpy`, `matplotlib.pyplot`, `sympy`
+* **Files & Documentation:**
+  * **Exercise 1:** [`Notebook`](<./1. Monte Carlo integration method 1.0 (parabolas)/monte-carlo-integration-method.ipynb>), [`Script (.py)`](<./1. Monte Carlo integration method 1.0 (parabolas)/monte-carlo-integration-method.py>), [Documentation (PDF)](<./1. Monte Carlo integration method 1.0 (parabolas)/assignment.pdf>)
+  * **Exercise 2:** [`Notebook`](<./2. Monte Carlo integration method 2.0 (mygraph)/monte-carlo-integration-2.0-mygraph.ipynb>), [`Script (.py)`](<./2. Monte Carlo integration method 2.0 (mygraph)/monte-carlo-integration-2.0-mygraph.py>), [Documentation (PDF)](<./2. Monte Carlo integration method 2.0 (mygraph)/assignment.pdf>)
 
+#### 📊 Output Visualizations
 
+##### Exercise 1: Enclosed Area Between Parabolas ($n = 1000$, 10 Trials)
+<p align="left">
+  <img src="./1. Monte Carlo integration method 1.0 (parabolas)/graph.png" width="450" alt="Monte Carlo Integration - Parabolas">
+</p>
 
-
-
+##### Exercise 2: Area Under $f(x) = \sqrt{x}$ for Varying Sample Sizes ($n = 1000, 4000, 16000$)
+<p align="left">
+  <img src="./2. Monte Carlo integration method 2.0 (mygraph)/graph_1.png" width="450" alt="Monte Carlo n=1000">
+</p>
+<p align="left">
+  <img src="./2. Monte Carlo integration method 2.0 (mygraph)/graph_2.png" width="450" alt="Monte Carlo n=4000">
+</p> 
+<p align="left">
+  <img src="./2. Monte Carlo integration method 2.0 (mygraph)/graph_3.png" width="450" alt="Monte Carlo n=16000">
+</p>
 
 
 
