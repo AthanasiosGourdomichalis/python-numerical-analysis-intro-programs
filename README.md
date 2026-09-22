@@ -52,7 +52,7 @@
 
 ---
 
-### 📌 03 & 04: Fixed-Point Iteration (General Iterative Method)
+### 📌 03 & 04: Fixed-Point Iteration (General Iterative Method) implementation
 * **Description:** Numerical solution of non-linear equations by rearranging $f(x) = 0$ into the equivalent fixed-point form $x = g(x)$ and generating the iterative sequence $x_{k+1} = g(x_k)$. Both implementations verify convergence conditions under the Fixed-Point Theorem and numerically estimate the asymptotic convergence rate ($p \approx 1.0$) and error constant ($C$).
   * **Exercise 3 (Errors Plot):** Solves the cubic equation $f(x) = x^3 + x - 1 = 0$ using the rearrangement $g(x) = \sqrt[3]{1 - x}$ with $x_0 = 0$, tolerance $\text{tol} = 10^{-6}$, and max iterations $= 100$. Tracks and plots consecutive errors $e_k = \vert{}x_{k+1} - x_k\vert{}$ across iterations, verifying an asymptotic error constant $C \approx 0.7160$.
   * **Exercise 4 (Functions Plot):** Solves $f(x) = \cos(x) - x = 0$ via the rearrangement $g(x) = \cos(x)$ starting from $x_0 = 0$. Provides a comparative geometric visualization of $y = \cos(x)$ against the identity line $y = x$ on $[-5, 5]$ highlighting the unique real root $x^* \approx 0.739085$ ($C \approx 0.6736$).
@@ -75,7 +75,7 @@
 
 ---
 
-### 📌 05: Newton-Raphson (N-R) Method
+### 📌 05: Newton-Raphson (N-R) Method implementation
 * **Description:** Iterative root-finding algorithm using tangent line linearization to compute real roots of the non-linear polynomial $f(x) = x^4 + 2x^3 - 7x^2 + 3 = 0$ with derivative $f'(x) = 4x^3 + 6x^2 - 14x$.
   * **Automated Root Search:** Iterates through starting points $x_0 = i \cdot 0.1$ (avoiding division-by-zero when $f'(x_0) = 0$) with tolerance $\text{tol} = 10^{-4}$ and $\text{maxit} = 15$ to isolate both distinct positive real roots: $x_1^* \approx 1.6180$ and $x_2^* \approx 0.7913$.
   * **Convergence Analysis ($x_0 = 1.4$):** Evaluates error progression towards $x^* \approx 1.6180$ in 5 iterations. The asymptotic error ratio $e_5 / e_4^2 \approx 1.8504$ closely matches the theoretical constant C = |f''(x*)| / (2|f'(x*)|) ≈ 1.8416, verifying quadratic convergence ($p = 2$).
@@ -92,6 +92,23 @@
 
 ---
 
+### 📌 06: Secant Method implementation
+* **Description:** Numerical root-finding algorithm that approximates the tangent slope using a secant line between the two most recent iterates, avoiding the need for an analytical derivative:
+  $$x_{n+1} = x_n - \frac{f(x_n)(x_n - x_{n-1})}{f(x_n) - f(x_{n-1})}$$
+  * **Target Non-linear Equation:** Solves $f(x) = x^4 + 2x^3 - 7x^2 + 3 = 0$.
+  * **Automated Search for Positive Roots:** Iterates through consecutive intervals $(x_0, x_1) = (i \cdot 0.1, (i + 1) \cdot 0.1)$ while bypassing division-by-zero intervals ($\text{tol} = 10^{-4}$, $\text{maxit} = 15$). Successfully locates both positive real roots: $x_1^* \approx 1.6180$ and $x_2^* \approx 0.7913$.
+  * **Convergence Analysis ($x_0 = 1.4, x_1 = 1.5$):** Converges to $x^* \approx 1.6180$ in 6 iterations. The sequence of consecutive errors confirms the characteristic superlinear convergence order of the golden ratio ($p \approx 1.618$):
+    $$p = \frac{1 + \sqrt{5}}{2} \approx 1.618$$
+* **Tools & Libraries:** `numpy`, `matplotlib.pyplot`
+* **Files & Documentation:** [`Notebook`](<./6. Secant method/secant-method.ipynb>), [`Script (.py)`](<./6. Secant method/secant-method.py>), [Documentation (PDF)](<./6. Secant method/assignment.pdf>)
+
+#### 📊 Output Visualizations (Error Convergence for $x_0 = 1.4, x_1 = 1.5$)
+<p align="left">
+  <img src="./6. Secant method/graph_1.png" width="450" alt="Secant Method Error - Linear Scale">
+</p>
+<p align="left">
+  <img src="./6. Secant method/graph_2.png" width="450" alt="Secant Method Error - Log Scale">
+</p>
 
 
 ---
