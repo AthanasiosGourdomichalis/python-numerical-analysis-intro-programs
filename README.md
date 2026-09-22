@@ -4,7 +4,7 @@
 ![Matplotlib](https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge&logo=python&logoColor=white)
 ![SymPy](https://img.shields.io/badge/SymPy-3B5526?style=for-the-badge&logo=python&logoColor=white)
 
-> A collection of **computational** and **numerical analysis** problems I have personally solved using `Python`, `NumPy`, `SymPy` and scientific visualizations (**plots**) with `Matplotlib`. Each project includes: **comprehensive documentation (PDF document)**, an **interactive `Jupyter Notebook`**, a **clean `.py script`**, and **exported plots**.
+> A collection of **computational** and **numerical analysis** problems **I have personally solved** using `Python`, `NumPy`, `SymPy` and scientific visualizations (**plots**) with `Matplotlib`. Each project includes: **comprehensive documentation (PDF document)**, an **interactive `Jupyter Notebook`**, a **clean `.py script`**, and **exported plots**.
 ---
 
 ## Table of Contents
