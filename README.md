@@ -109,8 +109,47 @@
   <img src="./6. Secant method/graph_2.png" width="450" alt="Secant Method Error - Log Scale">
 </p>
 
+---
+
+### 📌 07: Bonus Experiment : Computational Cost Comparison Between the Newton-Raphson method and the Secant method
+* **Description:** In-depth computational efficiency and cost benchmark between the Newton-Raphson method ($p = 2$, cost of $2k\text{ FLOPs/step}$) and the Secant method ($p \approx 1.618$, cost of $1k\text{ FLOPs/step}$) for finding the common positive root $x^* \approx 1.6180$ of $f(x) = x^4 + 2x^3 - 7x^2 + 3 = 0$ ($\text{tol} = 10^{-4}$, $\text{maxit} = 15$).
+  * **Theoretical Background:** Because $2^2 = 4 \approx 4.23 = 1.618^3$, 3 iterations of the Secant method reduce the error as much as 2 iterations of Newton-Raphson. Evaluating the derivative cost equality yields $4k > 3k$, theoretically establishing that the Secant method requires less computational effort overall despite needing more steps.
+  * **Empirical Validation:** Even though Newton-Raphson converges in fewer iterations (5 vs. 6), the Secant method achieves convergence with significantly fewer total function evaluations (7 vs. 10), resulting in lower measured CPU execution time ($18.84\ \mu\text{s} < 20.83\ \mu\text{s}$ over 20,000 runs) and confirming $7k < 10k$ and $3k < 4k$.
+* **Tools & Libraries:** `numpy`, `matplotlib.pyplot`, `timeit`
+* **Files & Documentation:** [`Notebook`](<./7. BONUS computational cost comparison between N-R and Secant/computational-cost-comparison-NR-secant.ipynb>), [Documentation (PDF)](<./7. BONUS computational cost comparison between N-R and Secant/assignment.pdf>)
+
+#### Summary Table of Results
+
+| Metric | Newton-Raphson (N-R) | Secant Method |
+| :--- | :--- | :--- |
+| **Initial Estimate(s)** | $x_0 = 1.4$ | $x_0 = 1.4, x_1 = 1.5$ |
+| **Computed Root ($x^*$)** | 1.6180 | 1.6180 |
+| **Iterations to Converge** | 5 | 6 |
+| **Function Evaluations ($f + f'$)** | 10 | 7 |
+| **Theoretical FLOPs Cost** | $10k$ | $7k$ |
+| **Final Error ($e_{\text{last}}$)** | $5.1418 \times 10^{-5}$ (0.00005) | $6.2415 \times 10^{-7}$ (0.0000006) |
+| **Execution Time (`timeit`)** | 20.83 $\mu\text{s}$ | 18.84 $\mu\text{s}$ |
+
+#### 📊 Output Visualizations
+
+#### Error vs. Iteration Count (Linear & Log Scale)
+<p align="left">
+  <img src="./7. BONUS computational cost comparison between N-R and Secant/graph_1.png" width="450" alt="Error vs. Iterations - Linear Scale">
+</p>
+<p align="left">
+  <img src="./7. BONUS computational cost comparison between N-R and Secant/graph_3.png" width="450" alt="Error vs. Iterations - Log Scale">
+</p>
+
+#### Error vs. Total Function Evaluations / FLOPs Cost (Linear & Log Scale)
+<p align="left">
+  <img src="./7. BONUS computational cost comparison between N-R and Secant/graph_2.png" width="450" alt="Error vs. Evaluations - Linear Scale">
+</p>
+<p align="left">
+  <img src="./7. BONUS computational cost comparison between N-R and Secant/graph_4.png" width="450" alt="Error vs. Evaluations - Log Scale">
+</p>
 
 ---
+
 # 👤 Author
 ## Athanasios Gourdomichalis - https://github.com/AthanasiosGourdomichalis
 
