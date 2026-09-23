@@ -253,8 +253,7 @@ Verification Check: L * L^T (Matches S):
 ```
 
 ---
-
 # 👤 Author
-## Athanasios Gourdomichalis - https://github.com/AthanasiosGourdomichalis
+## **Athanasios Gourdomichalis** - [GitHub Profile](https://github.com/AthanasiosGourdomichalis)
 
 ---
